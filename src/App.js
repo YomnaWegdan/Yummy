@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter, createHashRouter } from 'react-router-dom';
 import Layout from './Components/Layout';
 import Home from './Components/Home';
 import MealDetails from './Components/MealDetails';
@@ -14,7 +14,7 @@ import IngredientsMeals from './Components/IngredientsMeals';
 import Contacts from './Components/Contacts';
 
 function App() {
-  const routs = createBrowserRouter([
+  const routs = createHashRouter([
     {path:'' , element:<Layout/> , children:[
       {index:true , element:<Home/> },
       {path:'/search', element:<Search/>},
