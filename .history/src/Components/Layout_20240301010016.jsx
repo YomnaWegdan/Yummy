@@ -1,0 +1,26 @@
+import React, { Fragment, useState } from 'react'
+
+
+import { Outlet } from 'react-router-dom'
+import Navbar from './Navbar'
+import Sidebar from './Sidebar';
+export default function Layout() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+  return (
+    <Fragment>
+
+    <div className='bg-dark'>
+
+    
+    <div className="container  ">     
+    <button onClick={toggleSidebar}>Toggle Sidebar</button>
+    {isSidebarOpen && <Sidebar />}    
+        <Outlet/>
+      </div>    </div>       
+    </Fragment>
+  )
+}
