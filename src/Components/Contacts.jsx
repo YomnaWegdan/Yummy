@@ -49,18 +49,18 @@ export default function Contacts() {
   return (
     <div>
       <form onSubmit={formik.handleSubmit}
-        className="row align-items-center vh-100 align-content-center"
+        className="row align-items-center vh-100 align-content-center justify-content-end  "
       >
-        <div className="col-md-6">
+        <div className="col-md-6  ">
           <input
-            className="form-control"
+            className="form-control my-3"
             name="name"
             placeholder="Enter your Name"
             onChange={formik.handleChange} onBlur={formik.handleBlur}
           />
           {formik.errors.name && formik.touched.name ? (
           <div
-            className=" alert alert-danger mt-2 "
+            className=" alert alert-danger p-2 "
             role="alert"
           >
           {formik.errors.name}
@@ -70,7 +70,7 @@ export default function Contacts() {
         <div className="col-md-6">
           <input
             type="email"
-            className="form-control"
+            className="form-control my-3"
             name="email"
             placeholder="Enter your Email"
             onChange={formik.handleChange} onBlur={formik.handleBlur}
@@ -79,7 +79,7 @@ export default function Contacts() {
           {formik.errors.email && formik.touched.email ? (
 
           <div
-            className="alert alert-danger mt-2 "
+            className="alert alert-danger p-2 "
             role="alert"
           >
           {formik.errors.email}
@@ -88,7 +88,7 @@ export default function Contacts() {
         <div className="col-md-6">
           <input
             type="tel"
-            className="form-control"
+            className="form-control my-3"
             name="phone"
             placeholder="Enter your Phone"
             onChange={formik.handleChange} onBlur={formik.handleBlur}
@@ -97,15 +97,15 @@ export default function Contacts() {
           {formik.errors.phone && formik.touched.phone ? (
 
           <div
-            className=" alert alert-danger mt-2 "
+            className=" alert alert-danger p-2 "
             role="alert"
           >{formik.errors.phone}
           </div>): ''}
         </div>
-        <div className="col-md-6 my-4">
+        <div className="col-md-6 ">
           <input
             type="number"
-            className="form-control"
+            className="form-control my-3"
             name="age"
             placeholder="Enter your Age"
             onChange={formik.handleChange} onBlur={formik.handleBlur}
@@ -114,7 +114,7 @@ export default function Contacts() {
           {formik.errors.age && formik.touched.age ? (
 
           <div
-            className=" alert alert-danger mt-2 "
+            className=" alert alert-danger p-2 "
             role="alert"
           >
            {formik.errors.age}
@@ -123,7 +123,7 @@ export default function Contacts() {
         <div className="col-md-6">
           <input
             type="password"
-            className="form-control"
+            className="form-control my-3"
             name="password"
             placeholder="Enter your Password"
             onChange={formik.handleChange} onBlur={formik.handleBlur}
@@ -132,7 +132,7 @@ export default function Contacts() {
           {formik.errors.password && formik.touched.password ? (
 
           <div
-            className=" alert alert-danger mt-2 "
+            className=" alert alert-danger p-2 "
             role="alert"
           >
            {formik.errors.password}
@@ -141,7 +141,7 @@ export default function Contacts() {
         <div className="col-md-6">
           <input
             type="password"
-            className="form-control"
+            className="form-control my-3"
             name="repassword"
             placeholder=" Repassword"
             onChange={formik.handleChange} onBlur={formik.handleBlur}
@@ -150,7 +150,7 @@ export default function Contacts() {
           {formik.errors.repassword && formik.touched.repassword ? (
 
           <div
-            className=" alert alert-danger mt-2 "
+            className=" alert alert-danger p-2 "
             role="alert"
           >
           {formik.errors.repassword}
