@@ -82,4 +82,22 @@
     height: 600px !important;
     overflow: auto;
 }
-  
+
+
+@media screen and (max-width: 860px) {
+  .side{
+    background-color: transparent !important;
+  }
+  .toggle-btn{
+    background-color: white !important;
+    border-radius: 50%;
+    top: 20px !important;
+  }
+  .side-img{
+    display: none;
+  }
+  .sidebar.open{
+    box-shadow: 5px -5px #eee !important;
+
+  }
+}
